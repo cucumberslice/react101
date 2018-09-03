@@ -52,3 +52,8 @@ const asyncDataReducer = (state = defaultState, action) => {
       return state;
   }
 };
+
+const store = Redux.createStore(
+    asyncDataReducer,
+    Redux.applyMiddleware(ReduxThunk.default)
+  );
